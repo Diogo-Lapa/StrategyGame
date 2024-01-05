@@ -1,0 +1,110 @@
+[gd_scene load_steps=6 format=3 uid="uid://ddslonq0uggb"]
+
+[ext_resource type="FontFile" uid="uid://cykvoitwbb66q" path="res://Font/Roboto-Bold.ttf" id="1_2el87"]
+[ext_resource type="FontFile" uid="uid://bi3cbjggu06ll" path="res://Font/Roboto-Regular.ttf" id="2_nhg0p"]
+[ext_resource type="Texture2D" uid="uid://wb1io6xsl7ue" path="res://Sprites/Mine.png" id="3_0qsr1"]
+[ext_resource type="Texture2D" uid="uid://dq4q218kaagcg" path="res://Sprites/Greenhouse.png" id="4_oq70v"]
+[ext_resource type="Texture2D" uid="uid://b204xnjc274uq" path="res://Sprites/SolarPanel.png" id="5_s6m6a"]
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 576.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 144.0
+color = Color(0.219608, 0.219608, 0.219608, 1)
+
+[node name="EndTurnButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1046.0
+offset_top = 34.0
+offset_right = 1246.0
+offset_bottom = 109.0
+theme_override_fonts/font = ExtResource("1_2el87")
+theme_override_font_sizes/font_size = 36
+text = "End Turn"
+
+[node name="TurnLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 878.0
+offset_top = 56.0
+offset_right = 1021.0
+offset_bottom = 92.0
+theme_override_fonts/font = ExtResource("2_nhg0p")
+theme_override_font_sizes/font_size = 30
+text = "Turn: 225"
+
+[node name="BuildingButtons" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 34.0
+offset_right = 270.0
+offset_bottom = 109.0
+alignment = 1
+
+[node name="MineButton" type="Button" parent="BuildingButtons"]
+layout_mode = 2
+icon = ExtResource("3_0qsr1")
+
+[node name="GreenHouseButton" type="Button" parent="BuildingButtons"]
+layout_mode = 2
+icon = ExtResource("4_oq70v")
+
+[node name="SolarPanelButton" type="Button" parent="BuildingButtons"]
+layout_mode = 2
+icon = ExtResource("5_s6m6a")
+
+[node name="HeaderFoodMetalLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 32.0
+offset_right = 450.0
+offset_bottom = 107.0
+theme_override_fonts/font = ExtResource("2_nhg0p")
+theme_override_font_sizes/font_size = 30
+text = "Food:
+Metal:"
+horizontal_alignment = 2
+
+[node name="FoodMetalTextLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 464.0
+offset_top = 32.0
+offset_right = 592.0
+offset_bottom = 107.0
+theme_override_colors/font_color = Color(1, 0.678431, 0, 1)
+theme_override_fonts/font = ExtResource("2_nhg0p")
+theme_override_font_sizes/font_size = 30
+text = "25 (+80)
+25 (+80)"
+
+[node name="HeaderOxygenEnergyLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 592.0
+offset_top = 32.0
+offset_right = 699.0
+offset_bottom = 107.0
+theme_override_fonts/font = ExtResource("2_nhg0p")
+theme_override_font_sizes/font_size = 30
+text = "Oxygen:
+Energy:"
+horizontal_alignment = 2
+
+[node name="OxygenEnergyTextLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 720.0
+offset_top = 32.0
+offset_right = 848.0
+offset_bottom = 107.0
+theme_override_colors/font_color = Color(1, 0.678431, 0, 1)
+theme_override_fonts/font = ExtResource("2_nhg0p")
+theme_override_font_sizes/font_size = 30
+text = "25 (+80)
+25 (+80)"
