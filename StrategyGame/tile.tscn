@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://ckdgwp568kphc"]
+[gd_scene load_steps=5 format=3 uid="uid://ckdgwp568kphc"]
 
+[ext_resource type="Script" path="res://tile.gd" id="1_1u5y6"]
 [ext_resource type="Texture2D" uid="uid://c1rucju0yvw4x" path="res://Sprites/Ground.png" id="1_uswir"]
 [ext_resource type="Texture2D" uid="uid://clhca2oalq22u" path="res://Sprites/TileHighlight.png" id="2_cjx04"]
 
@@ -7,6 +8,7 @@
 size = Vector2(64, 64)
 
 [node name="Tile" type="Area2D"]
+script = ExtResource("1_1u5y6")
 
 [node name="Ground" type="Sprite2D" parent="."]
 texture = ExtResource("1_uswir")
@@ -21,3 +23,5 @@ texture = ExtResource("2_cjx04")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_3ek8t")
 one_way_collision_margin = 0.0
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

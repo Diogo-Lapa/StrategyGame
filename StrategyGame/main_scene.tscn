@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://dvsq4lvbbdwii"]
+[gd_scene load_steps=4 format=3 uid="uid://dvsq4lvbbdwii"]
 
 [ext_resource type="PackedScene" uid="uid://ckdgwp568kphc" path="res://tile.tscn" id="1_img75"]
+[ext_resource type="Script" path="res://map.gd" id="1_un12u"]
 [ext_resource type="PackedScene" uid="uid://ddslonq0uggb" path="res://ui.tscn" id="2_p4dac"]
 
 [node name="MainScene" type="Node2D"]
 
 [node name="Tiles" type="Node" parent="."]
+script = ExtResource("1_un12u")
 
 [node name="Tile" parent="Tiles" instance=ExtResource("1_img75")]
 position = Vector2(32, 32)
@@ -276,6 +278,7 @@ position = Vector2(544, 288)
 
 [node name="Tile90" parent="Tiles" instance=ExtResource("1_img75")]
 position = Vector2(608, 288)
+start_tile = true
 
 [node name="Tile91" parent="Tiles" instance=ExtResource("1_img75")]
 position = Vector2(672, 288)
