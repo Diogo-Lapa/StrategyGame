@@ -1,7 +1,7 @@
 extends Node
 
 var base = building.new(0, preload("res://Sprites/Base.png"), 0, 0, 0, 0)
-var mine = building.new(1, preload("res://Sprites/Mine.png"), 2, 1, 4, 1)
+var mine = building.new(1, preload("res://Sprites/Mine.png"), 2, 1, 4, -1)
 var greenhouse = building.new(2, preload("res://Sprites/Greenhouse.png"), 1, 1, 0, 0)
 var solar_panel = building.new(3, preload("res://Sprites/SolarPanel.png"), 4, 1, 0, 0)
 

@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://ddslonq0uggb"]
+[gd_scene load_steps=7 format=3 uid="uid://ddslonq0uggb"]
 
 [ext_resource type="FontFile" uid="uid://cykvoitwbb66q" path="res://Font/Roboto-Bold.ttf" id="1_2el87"]
+[ext_resource type="Script" path="res://ui.gd" id="1_cc3ee"]
 [ext_resource type="FontFile" uid="uid://bi3cbjggu06ll" path="res://Font/Roboto-Regular.ttf" id="2_nhg0p"]
 [ext_resource type="Texture2D" uid="uid://wb1io6xsl7ue" path="res://Sprites/Mine.png" id="3_0qsr1"]
 [ext_resource type="Texture2D" uid="uid://dq4q218kaagcg" path="res://Sprites/Greenhouse.png" id="4_oq70v"]
@@ -14,6 +15,7 @@ anchor_bottom = 1.0
 offset_top = 576.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_cc3ee")
 
 [node name="BG" type="ColorRect" parent="."]
 layout_mode = 0
@@ -108,3 +110,8 @@ theme_override_fonts/font = ExtResource("2_nhg0p")
 theme_override_font_sizes/font_size = 30
 text = "25 (+80)
 25 (+80)"
+
+[connection signal="pressed" from="EndTurnButton" to="." method="_on_end_turn_button_pressed"]
+[connection signal="pressed" from="BuildingButtons/MineButton" to="." method="_on_mine_button_pressed"]
+[connection signal="pressed" from="BuildingButtons/GreenHouseButton" to="." method="_on_green_house_button_pressed"]
+[connection signal="pressed" from="BuildingButtons/SolarPanelButton" to="." method="_on_solar_panel_button_pressed"]
